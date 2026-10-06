@@ -1,0 +1,25 @@
+rectangle
+press 10,10
+release 30,30
+draw		// A rectangle has been created and the tool returns to selection
+
+
+circle
+press 100,100
+release 200,200
+draw		// A circle has been created
+
+
+press 13,13
+move 15,15
+draw		// The rectangle is being moved
+
+release 20,20
+draw		// It has been moved
+
+
+triangle
+press 50,50
+press 60,60
+press 70,70
+draw		// A triangle is created

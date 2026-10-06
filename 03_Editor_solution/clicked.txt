@@ -1,0 +1,39 @@
+# Shape Detection
+
+## Rectangle
+
+1. Given a RECTANGLE, we want to know if it has been clicked inside.
+a) The Rectangle is defined by:
+    - Top left corner: "Point corner;"
+    - Width and height: "int width, height;"
+b) The coordinates where the mouse was clicked: "int x, y".
+
+The code that tells us if it has been clicked inside the shape is:
+
+    boolean clicked = (corner.x <= x && x <= corner.x + width) && (corner.y <= y && y <= corner.y + height);
+
+
+## Circle
+
+Given a CIRCLE, we want to know if it has been clicked inside.
+a) The Circle is defined by:
+    - Center of the circle: "Point center;"
+    - Radius: "int radius;"
+b) The coordinates where the mouse was clicked: "int x, y".
+
+The code that tells us if it has been clicked inside the shape is:
+
+    double distance = Math.sqrt(Math.pow(x - center.x, 2) + Math.pow(y - center.y, 2));
+    boolean clicked = distance < radius;
+
+
+## Triangle
+
+Given a TRIANGLE, we want to know if it has been clicked inside.
+a) The Triangle is defined by three vertices: "Point v1, v2, v3;".
+b) The coordinates where the mouse was clicked: "int x, y".
+
+The code that tells us if it has been clicked inside the shape is:
+
+    Point position = new Point(x, y);
+    boolean clicked = position.equals(v1) || position.equals(v2) || position.equals(v3);
